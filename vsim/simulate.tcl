@@ -17,7 +17,8 @@ add wave -divider OUTPUTS -color blue -position insertpoint  \
 sim:/tb_injection_module/y1_i \
 sim:/tb_injection_module/y2_i
 
-when -fast { /tb_injection_module/IM/sig1 = 1'h0 } { 
+#STF
+when -fast { /tb_injection_module/IM/sig1'event and /tb_injection_module/IM/sig1 = 1'h0 } { 
 	force -freeze sim:/tb_injection_module/IM/sig1 1'h1 0
 	force -deposit -freeze sim:/tb_injection_module/IM/sig1 1'h0 {44 ns}
 }
