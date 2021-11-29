@@ -8,7 +8,7 @@ wire y1_i,y2_i;
 
 	initial
 	begin
-		#20 clk_i = 1'b1;
+		 clk_i = 1'b1;
 		forever clk_i = #20 ~clk_i;
 	end
 
