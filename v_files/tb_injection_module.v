@@ -25,6 +25,12 @@ wire y1_i,y2_i;
 		#90 c_i = 1; f_i = 1; a_i = 0;
 		#90 b_i =1; c_i = 0; 
 		#130 a_i = 0; e_i = 1; b_i = 0;
+		#40 b_i = 1;
+		#60 b_i = 0;
+		#60 a_i = 1;
+		#50 a_i = 0;
+		#30 b_i = 1;
+		#70 b_i = 0;		
 	end
 
 	injection_module IM(

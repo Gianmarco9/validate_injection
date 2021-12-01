@@ -12,10 +12,10 @@ log -r *
 
 
 #set lst [list]
-set flag 0
-set previousTime  0
-set nowTime  0
-set forbiddenTime  0
+#set flag 0
+#set previousTime  0
+#set nowTime  0
+#set forbiddenTime  0
 
 #STF
 #when -fast -label main { /IM/sig1'event and /IM/sig1 = 1'h1 } {
@@ -51,16 +51,18 @@ set forbiddenTime  0
 #	}
 #}
 
+set forbiddenTime 0
+
 when -fast {/IM/sig1'event and /IM/sig1 = 1'h0} {
 	uivar forbiddenTime
-	if {$now != $forbiddenTime} {
+	if {$now != $forbiddenTime || $forbiddenTime == 0} {
 		force -freeze /tb_injection_module/IM/sig1 1'h1 -cancel { 44 ns }
 		set forbiddenTime [expr {$now + 44}]
 	}
 }
 
 
-run 700 ns
+run 900 ns
 
 #restart -f
 
@@ -78,7 +80,6 @@ sim:/tb_injection_module/e_i \
 sim:/tb_injection_module/f_i
 add wave -divider SIGNALS -color yellow -position insertpoint  \
 sim:/tb_injection_module/IM/sig1 \
-sim:tb_injection_module/tst_clk \
 sim:/tb_injection_module/IM/sig2
 add wave -divider OUTPUTS -color blue -position insertpoint  \
 sim:/tb_injection_module/y1_i \
