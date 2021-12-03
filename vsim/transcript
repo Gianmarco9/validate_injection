@@ -11,20 +11,20 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-do simulate.tcl
+# do simulate.tcl
 # vsim -quiet -voptargs="+acc" -t ns work.tb_injection_module 
-# Start time: 14:14:31 on Dec 02,2021
+# Start time: 16:19:57 on Dec 03,2021
 # ** Note: (vsim-3812) Design is being optimized...
-# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 1 times, errno 11
-# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 2 times, errno 11
-# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 3 times, errno 11
-# ** Error: Cannot lock WLF file: "vsim.wlf"
-#           errno 11: Resource temporarily unavailable.
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: gmongelli  Hostname: caomic2  ProcessID: 67321
-#           Attempting to use alternate WLF file "./wlftfgn5jN".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftfgn5jN
 # 0
-# End time: 14:16:02 on Dec 02,2021, Elapsed time: 0:01:31
-# Errors: 4, Warnings: 2
+# /IM/sig1
+# ** Error (suppressible): (vsim-3561) No objects found matching '$'.
+# Error in macro ./simulate.tcl line 64
+# ** Error (suppressible): (vsim-3561) No objects found matching '$'.
+#     while executing
+# "when -fast {$net'event and $net = 1'h0} {
+# 	uivar forbiddenTime
+# 	uivar net
+# 	if {$now != $forbiddenTime || $forbiddenTime == 0} {
+# 		force -freeze "/tb_i..."
+# End time: 16:21:50 on Dec 03,2021, Elapsed time: 0:01:53
+# Errors: 2, Warnings: 0
