@@ -13,18 +13,8 @@
 # //
 # do simulate.tcl
 # vsim -quiet -voptargs="+acc" -t ns work.tb_injection_module 
-# Start time: 16:19:57 on Dec 03,2021
+# Start time: 17:21:18 on Dec 09,2021
 # ** Note: (vsim-3812) Design is being optimized...
 # 0
-# /IM/sig1
-# ** Error (suppressible): (vsim-3561) No objects found matching '$'.
-# Error in macro ./simulate.tcl line 64
-# ** Error (suppressible): (vsim-3561) No objects found matching '$'.
-#     while executing
-# "when -fast {$net'event and $net = 1'h0} {
-# 	uivar forbiddenTime
-# 	uivar net
-# 	if {$now != $forbiddenTime || $forbiddenTime == 0} {
-# 		force -freeze "/tb_i..."
-# End time: 16:21:50 on Dec 03,2021, Elapsed time: 0:01:53
-# Errors: 2, Warnings: 0
+# End time: 17:23:08 on Dec 09,2021, Elapsed time: 0:01:50
+# Errors: 1, Warnings: 0

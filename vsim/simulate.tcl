@@ -55,12 +55,13 @@ set forbiddenTime 0
 
 when -fast {/IM/sig1'event and /IM/sig1 = 1'h0} {
 	uivar forbiddenTime
-	if {$now != $forbiddenTime || $forbiddenTime == 0} {
+	if {$now != $forbiddenTime} {
 		force -freeze /tb_injection_module/IM/sig1 1'h1 -cancel { 44 ns }
 		set forbiddenTime [expr {$now + 44}]
 	}
 }
 
+# || $forbiddenTime == 0
 
 run 900 ns
 
@@ -68,22 +69,16 @@ run 900 ns
 
 #nowhen *
 
-add wave -divider CLK -position insertpoint  \
-sim:/tb_injection_module/clk_i
 add wave -divider INPUT -color green -position insertpoint  \
-sim:/tb_injection_module/rstn_i \
 sim:/tb_injection_module/a_i \
 sim:/tb_injection_module/b_i \
-sim:/tb_injection_module/c_i \
-sim:/tb_injection_module/d_i \
 sim:/tb_injection_module/e_i \
 sim:/tb_injection_module/f_i
 add wave -divider SIGNALS -color yellow -position insertpoint  \
 sim:/tb_injection_module/IM/sig1 \
 sim:/tb_injection_module/IM/sig2
 add wave -divider OUTPUTS -color blue -position insertpoint  \
-sim:/tb_injection_module/y1_i \
-sim:/tb_injection_module/y2_i
+sim:/tb_injection_module/y_i
 
 #force -freeze sim:/tb_injection_module/IM/sig1 1'h1 {40 ns} -cancel {84 ns}
 #foreach var $lst {
