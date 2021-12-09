@@ -13,8 +13,9 @@
 # //
 # do simulate.tcl
 # vsim -quiet -voptargs="+acc" -t ns work.tb_injection_module 
-# Start time: 18:50:06 on Dec 09,2021
+# Start time: 19:56:15 on Dec 09,2021
 # ** Note: (vsim-3812) Design is being optimized...
 # 0
-# End time: 18:56:10 on Dec 09,2021, Elapsed time: 0:06:04
-# Errors: 46, Warnings: 0
+# Simulation stop requested.
+# End time: 19:58:46 on Dec 09,2021, Elapsed time: 0:02:31
+# Errors: 3, Warnings: 0
