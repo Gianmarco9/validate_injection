@@ -51,15 +51,28 @@ log -r *
 #	}
 #}
 
+#STF
+#set forbiddenTime 0
+#
+#when -fast {/IM/sig1'event and /IM/sig1 = 1'h0} {
+#	uivar forbiddenTime
+#	if {$now != $forbiddenTime} {
+#		force -freeze /tb_injection_module/IM/sig1 1'h1 -cancel { 44 ns }
+#		set forbiddenTime [expr {$now + 44}]
+#	}
+#}
+
+#STR
 set forbiddenTime 0
 
-when -fast {/IM/sig1'event and /IM/sig1 = 1'h0} {
+when -fast {/IM/sig1'event and /IM/sig1 = 1'h1} {
 	uivar forbiddenTime
 	if {$now != $forbiddenTime} {
-		force -freeze /tb_injection_module/IM/sig1 1'h1 -cancel { 44 ns }
+		force -freeze /tb_injection_module/IM/sig1 1'h0 -cancel { 44 ns }
 		set forbiddenTime [expr {$now + 44}]
 	}
 }
+
 
 # || $forbiddenTime == 0
 
