@@ -1,0 +1,770 @@
+vsim -quiet -voptargs=+acc -t ns work.tb_injection_module
+log -r *
+
+set forbiddenTime 0
+set delay 44
+
+when -fast {/IM/a'event and /IM/a = 1'h0} {
+	uivar delay
+	uivar forbiddenTime
+	if {$now != $forbiddenTime} {
+		force -freeze /tb_injection_module/IM/a 1'h1 -cancel $delay
+		set forbiddenTime [expr {$now + $delay}]
+	}
+}
+
+run 900 ns 
+
+add wave -divider INPUT -color green -position insertpoint  \
+sim:/tb_injection_module/a_i \
+sim:/tb_injection_module/b_i \
+sim:/tb_injection_module/e_i \
+sim:/tb_injection_module/f_i
+add wave -divider SIGNALS -color yellow -position insertpoint  \
+sim:/tb_injection_module/IM/sig1 \
+sim:/tb_injection_module/IM/sig2
+add wave -divider OUTPUTS -color blue -position insertpoint  \
+sim:/tb_injection_module/y_i
+
+quit -f
+STF_IM_a.txt analysis
+Reading pref.tcl
+
+# 2019.1
+
+# do simulate.tcl
+# vsim -quiet -voptargs="+acc" -t ns work.tb_injection_module 
+# Start time: 18:28:52 on Dec 14,2021
+# ** Note: (vsim-3812) Design is being optimized...
+# //  ModelSim SE-64 2019.1 Jan  1 2019 Linux 3.10.0-1062.12.1.el7.x86_64
+# //
+# //  Copyright 1991-2019 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# 0
+# 44
+# End time: 18:28:53 on Dec 14,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vsim -quiet -voptargs=+acc -t ns work.tb_injection_module
+log -r *
+
+set forbiddenTime 0
+set delay 44
+
+when -fast {/IM/a'event and /IM/a = 1'h1} {
+	uivar delay
+	uivar forbiddenTime
+	if {$now != $forbiddenTime} {
+		force -freeze /tb_injection_module/IM/a 1'h0 -cancel $delay
+		set forbiddenTime [expr {$now + $delay}]
+	}
+}
+
+run 900 ns 
+
+add wave -divider INPUT -color green -position insertpoint  \
+sim:/tb_injection_module/a_i \
+sim:/tb_injection_module/b_i \
+sim:/tb_injection_module/e_i \
+sim:/tb_injection_module/f_i
+add wave -divider SIGNALS -color yellow -position insertpoint  \
+sim:/tb_injection_module/IM/sig1 \
+sim:/tb_injection_module/IM/sig2
+add wave -divider OUTPUTS -color blue -position insertpoint  \
+sim:/tb_injection_module/y_i
+
+quit -f
+STR_IM_a.txt analysis
+Reading pref.tcl
+
+# 2019.1
+
+# do simulate.tcl
+# vsim -quiet -voptargs="+acc" -t ns work.tb_injection_module 
+# Start time: 18:28:55 on Dec 14,2021
+# ** Note: (vsim-3812) Design is being optimized...
+# //  ModelSim SE-64 2019.1 Jan  1 2019 Linux 3.10.0-1062.12.1.el7.x86_64
+# //
+# //  Copyright 1991-2019 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# 0
+# 44
+# End time: 18:28:55 on Dec 14,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -quiet -voptargs=+acc -t ns work.tb_injection_module
+log -r *
+
+set forbiddenTime 0
+set delay 44
+
+when -fast {/IM/b'event and /IM/b = 1'h0} {
+	uivar delay
+	uivar forbiddenTime
+	if {$now != $forbiddenTime} {
+		force -freeze /tb_injection_module/IM/b 1'h1 -cancel $delay
+		set forbiddenTime [expr {$now + $delay}]
+	}
+}
+
+run 900 ns 
+
+add wave -divider INPUT -color green -position insertpoint  \
+sim:/tb_injection_module/a_i \
+sim:/tb_injection_module/b_i \
+sim:/tb_injection_module/e_i \
+sim:/tb_injection_module/f_i
+add wave -divider SIGNALS -color yellow -position insertpoint  \
+sim:/tb_injection_module/IM/sig1 \
+sim:/tb_injection_module/IM/sig2
+add wave -divider OUTPUTS -color blue -position insertpoint  \
+sim:/tb_injection_module/y_i
+
+quit -f
+STF_IM_b.txt analysis
+Reading pref.tcl
+
+# 2019.1
+
+# do simulate.tcl
+# vsim -quiet -voptargs="+acc" -t ns work.tb_injection_module 
+# Start time: 18:28:57 on Dec 14,2021
+# ** Note: (vsim-3812) Design is being optimized...
+# //  ModelSim SE-64 2019.1 Jan  1 2019 Linux 3.10.0-1062.12.1.el7.x86_64
+# //
+# //  Copyright 1991-2019 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# 0
+# 44
+# End time: 18:28:58 on Dec 14,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vsim -quiet -voptargs=+acc -t ns work.tb_injection_module
+log -r *
+
+set forbiddenTime 0
+set delay 44
+
+when -fast {/IM/b'event and /IM/b = 1'h1} {
+	uivar delay
+	uivar forbiddenTime
+	if {$now != $forbiddenTime} {
+		force -freeze /tb_injection_module/IM/b 1'h0 -cancel $delay
+		set forbiddenTime [expr {$now + $delay}]
+	}
+}
+
+run 900 ns 
+
+add wave -divider INPUT -color green -position insertpoint  \
+sim:/tb_injection_module/a_i \
+sim:/tb_injection_module/b_i \
+sim:/tb_injection_module/e_i \
+sim:/tb_injection_module/f_i
+add wave -divider SIGNALS -color yellow -position insertpoint  \
+sim:/tb_injection_module/IM/sig1 \
+sim:/tb_injection_module/IM/sig2
+add wave -divider OUTPUTS -color blue -position insertpoint  \
+sim:/tb_injection_module/y_i
+
+quit -f
+STR_IM_b.txt analysis
+Reading pref.tcl
+
+# 2019.1
+
+# do simulate.tcl
+# vsim -quiet -voptargs="+acc" -t ns work.tb_injection_module 
+# Start time: 18:28:59 on Dec 14,2021
+# ** Note: (vsim-3812) Design is being optimized...
+# //  ModelSim SE-64 2019.1 Jan  1 2019 Linux 3.10.0-1062.12.1.el7.x86_64
+# //
+# //  Copyright 1991-2019 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# 0
+# 44
+# End time: 18:29:00 on Dec 14,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vsim -quiet -voptargs=+acc -t ns work.tb_injection_module
+log -r *
+
+set forbiddenTime 0
+set delay 44
+
+when -fast {/IM/e'event and /IM/e = 1'h0} {
+	uivar delay
+	uivar forbiddenTime
+	if {$now != $forbiddenTime} {
+		force -freeze /tb_injection_module/IM/e 1'h1 -cancel $delay
+		set forbiddenTime [expr {$now + $delay}]
+	}
+}
+
+run 900 ns 
+
+add wave -divider INPUT -color green -position insertpoint  \
+sim:/tb_injection_module/a_i \
+sim:/tb_injection_module/b_i \
+sim:/tb_injection_module/e_i \
+sim:/tb_injection_module/f_i
+add wave -divider SIGNALS -color yellow -position insertpoint  \
+sim:/tb_injection_module/IM/sig1 \
+sim:/tb_injection_module/IM/sig2
+add wave -divider OUTPUTS -color blue -position insertpoint  \
+sim:/tb_injection_module/y_i
+
+quit -f
+STF_IM_e.txt analysis
+Reading pref.tcl
+
+# 2019.1
+
+# do simulate.tcl
+# vsim -quiet -voptargs="+acc" -t ns work.tb_injection_module 
+# Start time: 18:29:02 on Dec 14,2021
+# ** Note: (vsim-3812) Design is being optimized...
+# //  ModelSim SE-64 2019.1 Jan  1 2019 Linux 3.10.0-1062.12.1.el7.x86_64
+# //
+# //  Copyright 1991-2019 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# 0
+# 44
+# End time: 18:29:02 on Dec 14,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -quiet -voptargs=+acc -t ns work.tb_injection_module
+log -r *
+
+set forbiddenTime 0
+set delay 44
+
+when -fast {/IM/e'event and /IM/e = 1'h1} {
+	uivar delay
+	uivar forbiddenTime
+	if {$now != $forbiddenTime} {
+		force -freeze /tb_injection_module/IM/e 1'h0 -cancel $delay
+		set forbiddenTime [expr {$now + $delay}]
+	}
+}
+
+run 900 ns 
+
+add wave -divider INPUT -color green -position insertpoint  \
+sim:/tb_injection_module/a_i \
+sim:/tb_injection_module/b_i \
+sim:/tb_injection_module/e_i \
+sim:/tb_injection_module/f_i
+add wave -divider SIGNALS -color yellow -position insertpoint  \
+sim:/tb_injection_module/IM/sig1 \
+sim:/tb_injection_module/IM/sig2
+add wave -divider OUTPUTS -color blue -position insertpoint  \
+sim:/tb_injection_module/y_i
+
+quit -f
+STR_IM_e.txt analysis
+Reading pref.tcl
+
+# 2019.1
+
+# do simulate.tcl
+# vsim -quiet -voptargs="+acc" -t ns work.tb_injection_module 
+# Start time: 18:29:04 on Dec 14,2021
+# ** Note: (vsim-3812) Design is being optimized...
+# //  ModelSim SE-64 2019.1 Jan  1 2019 Linux 3.10.0-1062.12.1.el7.x86_64
+# //
+# //  Copyright 1991-2019 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# 0
+# 44
+# End time: 18:29:05 on Dec 14,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vsim -quiet -voptargs=+acc -t ns work.tb_injection_module
+log -r *
+
+set forbiddenTime 0
+set delay 44
+
+when -fast {/IM/f'event and /IM/f = 1'h0} {
+	uivar delay
+	uivar forbiddenTime
+	if {$now != $forbiddenTime} {
+		force -freeze /tb_injection_module/IM/f 1'h1 -cancel $delay
+		set forbiddenTime [expr {$now + $delay}]
+	}
+}
+
+run 900 ns 
+
+add wave -divider INPUT -color green -position insertpoint  \
+sim:/tb_injection_module/a_i \
+sim:/tb_injection_module/b_i \
+sim:/tb_injection_module/e_i \
+sim:/tb_injection_module/f_i
+add wave -divider SIGNALS -color yellow -position insertpoint  \
+sim:/tb_injection_module/IM/sig1 \
+sim:/tb_injection_module/IM/sig2
+add wave -divider OUTPUTS -color blue -position insertpoint  \
+sim:/tb_injection_module/y_i
+
+quit -f
+STF_IM_f.txt analysis
+Reading pref.tcl
+
+# 2019.1
+
+# do simulate.tcl
+# vsim -quiet -voptargs="+acc" -t ns work.tb_injection_module 
+# Start time: 18:29:06 on Dec 14,2021
+# ** Note: (vsim-3812) Design is being optimized...
+# //  ModelSim SE-64 2019.1 Jan  1 2019 Linux 3.10.0-1062.12.1.el7.x86_64
+# //
+# //  Copyright 1991-2019 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# 0
+# 44
+# End time: 18:29:07 on Dec 14,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vsim -quiet -voptargs=+acc -t ns work.tb_injection_module
+log -r *
+
+set forbiddenTime 0
+set delay 44
+
+when -fast {/IM/f'event and /IM/f = 1'h1} {
+	uivar delay
+	uivar forbiddenTime
+	if {$now != $forbiddenTime} {
+		force -freeze /tb_injection_module/IM/f 1'h0 -cancel $delay
+		set forbiddenTime [expr {$now + $delay}]
+	}
+}
+
+run 900 ns 
+
+add wave -divider INPUT -color green -position insertpoint  \
+sim:/tb_injection_module/a_i \
+sim:/tb_injection_module/b_i \
+sim:/tb_injection_module/e_i \
+sim:/tb_injection_module/f_i
+add wave -divider SIGNALS -color yellow -position insertpoint  \
+sim:/tb_injection_module/IM/sig1 \
+sim:/tb_injection_module/IM/sig2
+add wave -divider OUTPUTS -color blue -position insertpoint  \
+sim:/tb_injection_module/y_i
+
+quit -f
+STR_IM_f.txt analysis
+Reading pref.tcl
+
+# 2019.1
+
+# do simulate.tcl
+# vsim -quiet -voptargs="+acc" -t ns work.tb_injection_module 
+# Start time: 18:29:09 on Dec 14,2021
+# ** Note: (vsim-3812) Design is being optimized...
+# //  ModelSim SE-64 2019.1 Jan  1 2019 Linux 3.10.0-1062.12.1.el7.x86_64
+# //
+# //  Copyright 1991-2019 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# 0
+# 44
+# End time: 18:29:09 on Dec 14,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -quiet -voptargs=+acc -t ns work.tb_injection_module
+log -r *
+
+set forbiddenTime 0
+set delay 44
+
+when -fast {/IM/sig1'event and /IM/sig1 = 1'h0} {
+	uivar delay
+	uivar forbiddenTime
+	if {$now != $forbiddenTime} {
+		force -freeze /tb_injection_module/IM/sig1 1'h1 -cancel $delay
+		set forbiddenTime [expr {$now + $delay}]
+	}
+}
+
+run 900 ns 
+
+add wave -divider INPUT -color green -position insertpoint  \
+sim:/tb_injection_module/a_i \
+sim:/tb_injection_module/b_i \
+sim:/tb_injection_module/e_i \
+sim:/tb_injection_module/f_i
+add wave -divider SIGNALS -color yellow -position insertpoint  \
+sim:/tb_injection_module/IM/sig1 \
+sim:/tb_injection_module/IM/sig2
+add wave -divider OUTPUTS -color blue -position insertpoint  \
+sim:/tb_injection_module/y_i
+
+quit -f
+STF_IM_sig1.txt analysis
+Reading pref.tcl
+
+# 2019.1
+
+# do simulate.tcl
+# vsim -quiet -voptargs="+acc" -t ns work.tb_injection_module 
+# Start time: 18:29:11 on Dec 14,2021
+# ** Note: (vsim-3812) Design is being optimized...
+# //  ModelSim SE-64 2019.1 Jan  1 2019 Linux 3.10.0-1062.12.1.el7.x86_64
+# //
+# //  Copyright 1991-2019 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# 0
+# 44
+# End time: 18:29:12 on Dec 14,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vsim -quiet -voptargs=+acc -t ns work.tb_injection_module
+log -r *
+
+set forbiddenTime 0
+set delay 44
+
+when -fast {/IM/sig1'event and /IM/sig1 = 1'h1} {
+	uivar delay
+	uivar forbiddenTime
+	if {$now != $forbiddenTime} {
+		force -freeze /tb_injection_module/IM/sig1 1'h0 -cancel $delay
+		set forbiddenTime [expr {$now + $delay}]
+	}
+}
+
+run 900 ns 
+
+add wave -divider INPUT -color green -position insertpoint  \
+sim:/tb_injection_module/a_i \
+sim:/tb_injection_module/b_i \
+sim:/tb_injection_module/e_i \
+sim:/tb_injection_module/f_i
+add wave -divider SIGNALS -color yellow -position insertpoint  \
+sim:/tb_injection_module/IM/sig1 \
+sim:/tb_injection_module/IM/sig2
+add wave -divider OUTPUTS -color blue -position insertpoint  \
+sim:/tb_injection_module/y_i
+
+quit -f
+STR_IM_sig1.txt analysis
+Reading pref.tcl
+
+# 2019.1
+
+# do simulate.tcl
+# vsim -quiet -voptargs="+acc" -t ns work.tb_injection_module 
+# Start time: 18:29:13 on Dec 14,2021
+# ** Note: (vsim-3812) Design is being optimized...
+# //  ModelSim SE-64 2019.1 Jan  1 2019 Linux 3.10.0-1062.12.1.el7.x86_64
+# //
+# //  Copyright 1991-2019 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# 0
+# 44
+# End time: 18:29:14 on Dec 14,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vsim -quiet -voptargs=+acc -t ns work.tb_injection_module
+log -r *
+
+set forbiddenTime 0
+set delay 44
+
+when -fast {/IM/sig2'event and /IM/sig2 = 1'h0} {
+	uivar delay
+	uivar forbiddenTime
+	if {$now != $forbiddenTime} {
+		force -freeze /tb_injection_module/IM/sig2 1'h1 -cancel $delay
+		set forbiddenTime [expr {$now + $delay}]
+	}
+}
+
+run 900 ns 
+
+add wave -divider INPUT -color green -position insertpoint  \
+sim:/tb_injection_module/a_i \
+sim:/tb_injection_module/b_i \
+sim:/tb_injection_module/e_i \
+sim:/tb_injection_module/f_i
+add wave -divider SIGNALS -color yellow -position insertpoint  \
+sim:/tb_injection_module/IM/sig1 \
+sim:/tb_injection_module/IM/sig2
+add wave -divider OUTPUTS -color blue -position insertpoint  \
+sim:/tb_injection_module/y_i
+
+quit -f
+STF_IM_sig2.txt analysis
+Reading pref.tcl
+
+# 2019.1
+
+# do simulate.tcl
+# vsim -quiet -voptargs="+acc" -t ns work.tb_injection_module 
+# Start time: 18:29:16 on Dec 14,2021
+# ** Note: (vsim-3812) Design is being optimized...
+# //  ModelSim SE-64 2019.1 Jan  1 2019 Linux 3.10.0-1062.12.1.el7.x86_64
+# //
+# //  Copyright 1991-2019 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# 0
+# 44
+# End time: 18:29:16 on Dec 14,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -quiet -voptargs=+acc -t ns work.tb_injection_module
+log -r *
+
+set forbiddenTime 0
+set delay 44
+
+when -fast {/IM/sig2'event and /IM/sig2 = 1'h1} {
+	uivar delay
+	uivar forbiddenTime
+	if {$now != $forbiddenTime} {
+		force -freeze /tb_injection_module/IM/sig2 1'h0 -cancel $delay
+		set forbiddenTime [expr {$now + $delay}]
+	}
+}
+
+run 900 ns 
+
+add wave -divider INPUT -color green -position insertpoint  \
+sim:/tb_injection_module/a_i \
+sim:/tb_injection_module/b_i \
+sim:/tb_injection_module/e_i \
+sim:/tb_injection_module/f_i
+add wave -divider SIGNALS -color yellow -position insertpoint  \
+sim:/tb_injection_module/IM/sig1 \
+sim:/tb_injection_module/IM/sig2
+add wave -divider OUTPUTS -color blue -position insertpoint  \
+sim:/tb_injection_module/y_i
+
+quit -f
+STR_IM_sig2.txt analysis
+Reading pref.tcl
+
+# 2019.1
+
+# do simulate.tcl
+# vsim -quiet -voptargs="+acc" -t ns work.tb_injection_module 
+# Start time: 18:29:18 on Dec 14,2021
+# ** Note: (vsim-3812) Design is being optimized...
+# //  ModelSim SE-64 2019.1 Jan  1 2019 Linux 3.10.0-1062.12.1.el7.x86_64
+# //
+# //  Copyright 1991-2019 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# 0
+# 44
+# End time: 18:29:19 on Dec 14,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vsim -quiet -voptargs=+acc -t ns work.tb_injection_module
+log -r *
+
+set forbiddenTime 0
+set delay 44
+
+when -fast {/IM/y'event and /IM/y = 1'h0} {
+	uivar delay
+	uivar forbiddenTime
+	if {$now != $forbiddenTime} {
+		force -freeze /tb_injection_module/IM/y 1'h1 -cancel $delay
+		set forbiddenTime [expr {$now + $delay}]
+	}
+}
+
+run 900 ns 
+
+add wave -divider INPUT -color green -position insertpoint  \
+sim:/tb_injection_module/a_i \
+sim:/tb_injection_module/b_i \
+sim:/tb_injection_module/e_i \
+sim:/tb_injection_module/f_i
+add wave -divider SIGNALS -color yellow -position insertpoint  \
+sim:/tb_injection_module/IM/sig1 \
+sim:/tb_injection_module/IM/sig2
+add wave -divider OUTPUTS -color blue -position insertpoint  \
+sim:/tb_injection_module/y_i
+
+quit -f
+STF_IM_y.txt analysis
+Reading pref.tcl
+
+# 2019.1
+
+# do simulate.tcl
+# vsim -quiet -voptargs="+acc" -t ns work.tb_injection_module 
+# Start time: 18:29:20 on Dec 14,2021
+# ** Note: (vsim-3812) Design is being optimized...
+# //  ModelSim SE-64 2019.1 Jan  1 2019 Linux 3.10.0-1062.12.1.el7.x86_64
+# //
+# //  Copyright 1991-2019 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# 0
+# 44
+# End time: 18:29:21 on Dec 14,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vsim -quiet -voptargs=+acc -t ns work.tb_injection_module
+log -r *
+
+set forbiddenTime 0
+set delay 44
+
+when -fast {/IM/y'event and /IM/y = 1'h1} {
+	uivar delay
+	uivar forbiddenTime
+	if {$now != $forbiddenTime} {
+		force -freeze /tb_injection_module/IM/y 1'h0 -cancel $delay
+		set forbiddenTime [expr {$now + $delay}]
+	}
+}
+
+run 900 ns 
+
+add wave -divider INPUT -color green -position insertpoint  \
+sim:/tb_injection_module/a_i \
+sim:/tb_injection_module/b_i \
+sim:/tb_injection_module/e_i \
+sim:/tb_injection_module/f_i
+add wave -divider SIGNALS -color yellow -position insertpoint  \
+sim:/tb_injection_module/IM/sig1 \
+sim:/tb_injection_module/IM/sig2
+add wave -divider OUTPUTS -color blue -position insertpoint  \
+sim:/tb_injection_module/y_i
+
+quit -f
+STR_IM_y.txt analysis
+Reading pref.tcl
+
+# 2019.1
+
+# do simulate.tcl
+# vsim -quiet -voptargs="+acc" -t ns work.tb_injection_module 
+# Start time: 18:29:23 on Dec 14,2021
+# ** Note: (vsim-3812) Design is being optimized...
+# //  ModelSim SE-64 2019.1 Jan  1 2019 Linux 3.10.0-1062.12.1.el7.x86_64
+# //
+# //  Copyright 1991-2019 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# 0
+# 44
+# End time: 18:29:24 on Dec 14,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

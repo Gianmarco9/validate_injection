@@ -1,0 +1,13 @@
+3a4,5
+>  180 ns:	a=0 b=0 e=0 f=1 -> sig1=1 sig2=0 -> y=1
+>  224 ns:	a=0 b=0 e=0 f=1 -> sig1=0 sig2=0 -> y=0
+5a8
+>  400 ns:	a=0 b=0 e=1 f=1 -> sig1=1 sig2=1 -> y=0
+7a11,12
+>  500 ns:	a=0 b=0 e=1 f=1 -> sig1=1 sig2=1 -> y=0
+>  544 ns:	a=0 b=0 e=1 f=1 -> sig1=0 sig2=1 -> y=1
+9a15
+>  610 ns:	a=0 b=0 e=1 f=1 -> sig1=1 sig2=1 -> y=0
+11a18,19
+>  710 ns:	a=0 b=0 e=1 f=1 -> sig1=1 sig2=1 -> y=0
+>  754 ns:	a=0 b=0 e=1 f=1 -> sig1=0 sig2=1 -> y=1

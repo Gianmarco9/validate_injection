@@ -13,9 +13,10 @@
 # //
 # do simulate.tcl
 # vsim -quiet -voptargs="+acc" -t ns work.tb_injection_module 
-# Start time: 19:56:15 on Dec 09,2021
+# Start time: 19:15:49 on Dec 14,2021
 # ** Note: (vsim-3812) Design is being optimized...
 # 0
-# Simulation stop requested.
-# End time: 19:58:46 on Dec 09,2021, Elapsed time: 0:02:31
-# Errors: 3, Warnings: 0
+# 44
+# Causality operation skipped due to absence of debug database file
+# End time: 19:24:42 on Dec 14,2021, Elapsed time: 0:08:53
+# Errors: 2, Warnings: 1
