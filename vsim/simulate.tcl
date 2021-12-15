@@ -1,4 +1,4 @@
-vsim -quiet -voptargs=+acc -t ns work.tb_injection_module
+vsim -quiet -voptargs=+acc -t ps work.tb_injection_module
 log -r *
 
 set forbiddenTime 0
