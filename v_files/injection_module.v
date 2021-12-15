@@ -17,7 +17,7 @@ module injection_module ( input a,b,e,f,
 	initial begin
 		fd = $fopen("../report/faulty_simulation.txt","w");
 		while(1) begin
-			@(a or b or e or f or sig1 or sig2);
+			@(a or b or e or f or sig1 or sig2 or y);
 			$fwrite(fd,now," ps:	a=",a," b=",b," e=",e," f=",f," -> sig1=",sig1," sig2=",sig2," -> y=");
 			$fdisplay(fd,y);
 		end
