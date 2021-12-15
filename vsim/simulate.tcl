@@ -2,16 +2,16 @@ vsim -quiet -voptargs=+acc -t ps work.tb_injection_module
 log -r *
 
 set forbiddenTime 0
-set delay 44
+set delay 44000
 
-#when -fast {/IM/y'event and /IM/y = 1'h1} {
-#	uivar delay
-#	uivar forbiddenTime
-#	if {$now != $forbiddenTime} {
-#		force -freeze /tb_injection_module/IM/y 1'h0 -cancel $delay
-#		set forbiddenTime [expr {$now + $delay}]
-#	}
-#}
+when -fast {/IM/y'event and /IM/y = 1'h1} {
+	uivar delay
+	uivar forbiddenTime
+	if {$now != $forbiddenTime} {
+		force -freeze /tb_injection_module/IM/y 1'h0 -cancel $delay
+		set forbiddenTime [expr {$now + $delay}]
+	}
+}
 
 run 900 ns 
 

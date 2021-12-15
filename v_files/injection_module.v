@@ -1,6 +1,5 @@
 module injection_module ( input a,b,e,f,
 			  output y);
-	
 	integer now = 0;
 	integer fd;
 	reg clk;
