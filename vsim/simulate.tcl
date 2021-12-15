@@ -4,14 +4,14 @@ log -r *
 set forbiddenTime 0
 set delay 44
 
-when -fast {/IM/a'event and /IM/a = 1'h0} {
-	uivar delay
-	uivar forbiddenTime
-	if {$now != $forbiddenTime} {
-		force -freeze /tb_injection_module/IM/a 1'h1 -cancel $delay
-		set forbiddenTime [expr {$now + $delay}]
-	}
-}
+#when -fast {/IM/y'event and /IM/y = 1'h1} {
+#	uivar delay
+#	uivar forbiddenTime
+#	if {$now != $forbiddenTime} {
+#		force -freeze /tb_injection_module/IM/y 1'h0 -cancel $delay
+#		set forbiddenTime [expr {$now + $delay}]
+#	}
+#}
 
 run 900 ns 
 
@@ -26,4 +26,4 @@ sim:/tb_injection_module/IM/sig2
 add wave -divider OUTPUTS -color blue -position insertpoint  \
 sim:/tb_injection_module/y_i
 
-#quit -f
+quit -f

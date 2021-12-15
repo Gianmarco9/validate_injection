@@ -1,1 +1,1 @@
-STF_IM_a.txt
+STR_IM_y.txt
