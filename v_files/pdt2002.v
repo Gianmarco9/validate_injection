@@ -24,7 +24,9 @@
 module And_Gate(I1, I2, O);
         input I1, I2;
         output O;
-        and(O, I1, I2);
+
+	assign O = I1 and I2;
+//        and(O, I1, I2);
 endmodule
 
 module And3_Gate(I1, I2, I3, O);
@@ -136,7 +138,9 @@ endmodule
 module Xor_Gate(I1, I2, O);
         input I1, I2;
         output O;
-        xor(O, I1, I2);
+
+	assign O = I1 xor I2;
+//        xor(O, I1, I2);
 endmodule
 
 module Xor3_Gate(I1, I2, I3, O);
