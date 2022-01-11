@@ -15,11 +15,11 @@ module injection_module ( input a,b,e,f,
 
 	Or_Gate Or2(
                 .I1(e),
-                .I2(f),
+                .I2(fN),
                 .O(sig2)
         );
 
-	And_Gate And1(
+	Xor_Gate Xor1(
 		.I1(sig1),
 		.I2(sig2),
 		.O(y)
