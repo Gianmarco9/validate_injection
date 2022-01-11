@@ -1,19 +1,19 @@
 STIL 1.0 { Design 2005; }
 Header {
    Title "  TetraMAX(R)  R-2020.09-SP2-i20201203_113427 STIL output";
-   Date "Tue Jan 11 17:00:26 2022";
+   Date "Tue Jan 11 18:51:48 2022";
    History {
       Ann {*   Uncollapsed Transition Fault Summary Report *}
       Ann {* ----------------------------------------------- *}
       Ann {* fault class                     code   #faults *}
       Ann {* ------------------------------  ----  --------- *}
-      Ann {* Detected                         DT         32 *}
+      Ann {* Detected                         DT         28 *}
       Ann {* Possibly detected                PT          0 *}
       Ann {* Undetectable                     UD          0 *}
       Ann {* ATPG untestable                  AU          0 *}
       Ann {* Not detected                     ND          0 *}
       Ann {* ----------------------------------------------- *}
-      Ann {* total faults                                32 *}
+      Ann {* total faults                                28 *}
       Ann {* test coverage                           100.00% *}
       Ann {* ----------------------------------------------- *}
       Ann {*  *}

@@ -10,7 +10,7 @@ module injection_module ( input a,b,e,f,
 
 	Or_Gate Or2(
                 .I1(e),
-                .I2(!f),
+                .I2(~f),
                 .O(sig2)
         );
 
