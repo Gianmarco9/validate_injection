@@ -67,5 +67,8 @@ destination.close()
 
 shutil.move("./files/signal.txt","./files/c.txt")
 bo = open("./files/signal.txt","w")
-bo.write(toPass + "_" + signal.split("/")[0] + "_" + signal.split("/")[1] + ".txt")
+words = signal.split("/")
+for x in words:
+	toPass = toPass + "_" + x
+bo.write(toPass + ".txt")
 bo.close()

@@ -1,13 +1,14 @@
 # do simulate.tcl
 # vsim -quiet -voptargs="+acc" -t ps work.tb_injection_module 
-# Start time: 11:47:45 on Jan 12,2022
+# Start time: 17:51:48 on Jan 13,2022
 # ** Note: (vsim-3812) Design is being optimized...
-# //  ModelSim SE-64 2019.1 Jan  1 2019 Linux 3.10.0-1062.12.1.el7.x86_64
+# //  Questa Sim-64
+# //  Version 10.5c_4 linux_x86_64 Nov 30 2016
 # //
-# //  Copyright 1991-2019 Mentor Graphics Corporation
+# //  Copyright 1991-2016 Mentor Graphics Corporation
 # //  All Rights Reserved.
 # //
-# //  ModelSim SE-64 and its associated documentation contain trade
+# //  QuestaSim and its associated documentation contain trade
 # //  secrets and commercial or financial information that are the property of
 # //  Mentor Graphics Corporation and are privileged, confidential,
 # //  and exempt from disclosure under the Freedom of Information Act,
@@ -17,5 +18,5 @@
 # //
 # 0
 # 44000
-# End time: 11:47:46 on Jan 12,2022, Elapsed time: 0:00:01
+# End time: 17:51:50 on Jan 13,2022, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
