@@ -1,3 +1,12 @@
+`celldefine
+`ifdef functional
+   `timescale 1ps / 1ps
+   `delay_mode_zero
+`else
+   `timescale 1ps / 1ps
+   `delay_mode_path
+`endif
+
 module tb_injection_module ();
 
 	reg a_i,b_i,e_i,f_i;

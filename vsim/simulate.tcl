@@ -15,12 +15,12 @@ set delay 44000
 #}
 
 #modified library
-when -fast {/IM/Xor1/A'event and /IM/Xor1/A = 1'h0} {
+when -fast {/IM/Xor1/Z'event and /IM/Xor1/Z = 1'h1} {
 	uivar delay
 	uivar forbiddenTime
 	if {$now != $forbiddenTime} {
-		force -freeze /tb_injection_module/IM/Xor1/A_sa1 1'h1
-		force -freeze /tb_injection_module/IM/Xor1/A_sa1 1'h0 $delay
+		force -freeze /tb_injection_module/IM/Xor1/Z_sa0 1'h1
+		force -freeze /tb_injection_module/IM/Xor1/Z_sa0 1'h0 $delay
 		set forbiddenTime [expr {$now + $delay}]
 	}
 }
