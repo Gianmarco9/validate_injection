@@ -1,0 +1,14 @@
+F IM/Or1/A1
+R IM/Or1/A1
+F IM/Or1/A2
+R IM/Or1/A2
+F IM/Or2/A1
+R IM/Or2/A1
+F IM/Or2/A2
+R IM/Or2/A2
+F IM/Xor1/A
+R IM/Xor1/A
+F IM/Xor1/B
+R IM/Xor1/B
+F IM/Xor1/Z
+R IM/Xor1/Z

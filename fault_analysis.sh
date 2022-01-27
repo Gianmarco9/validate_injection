@@ -1,7 +1,7 @@
 #!/bin/sh
 
 while IFS= read -r line; do 
-	python ./py_files/modificaFile.py ./vsim/simulate.tcl ./vsim/trashed.tcl $line; 
+	python ./py_files/modificaFile_modified_library.py ./vsim/simulate.tcl ./vsim/trashed.tcl $line; 
 #	cat vsim/simulate.tcl
 	rm ./vsim/trashed.tcl;
 	var=$(cat files/signal.txt)
@@ -15,6 +15,6 @@ while IFS= read -r line; do
 		diff report/golden_simulation.txt report/faulty_simulation.txt >> report/${var}
 		rm report/faulty_simulation.txt
 	fi
-done < ./files/all_signals.txt
+done < ./files/all_signals_mod_library.txt
 
 
